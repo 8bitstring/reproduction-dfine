@@ -1,0 +1,59 @@
+{
+  "paper": {
+    "title": "D-FINE: Redefine Regression Task in DETRs as Fine-grained Distribution Refinement",
+    "venue": "ICLR 2025 (Spotlight)",
+    "arxiv": "2410.13842",
+    "repo": "https://github.com/Peterande/D-FINE",
+    "commit": "956d1709314c2c6a4df6f34de232054578a7449f",
+    "dataset": "MS COCO 2017 Validation Split",
+    "dataset_images": 5000
+  },
+  "models": {
+    "dfine_s": {
+      "description": "D-FINE-S (HGNetv2-S backbone, Appendix Table 7)",
+      "parameters_M": 10.3,
+      "checkpoint": "dfine_s_coco.pth",
+      "checkpoint_sha256": "48A6C8CC43EB57186843F752E2E8461DDD3326E0D3C575E71E6E960844683E89",
+      "paper": {
+        "AP": 48.5,
+        "AP50": 65.6,
+        "AP75": 52.6,
+        "APs": 29.1,
+        "APm": 52.2,
+        "APl": 65.4
+      },
+      "reproduced": {
+        "AP": 48.51,
+        "AP50": 65.44,
+        "AP75": 52.58,
+        "APs": 29.34,
+        "APm": 52.24,
+        "APl": 65.43
+      }
+    },
+    "dfine_l": {
+      "description": "D-FINE-L (HGNetv2-L backbone, Main Table 1)",
+      "parameters_M": 31.2,
+      "checkpoint": "dfine_l_coco.pth",
+      "checkpoint_sha256": "F1D76B20C06610E03FA833AC9524337635E5E74204F22F4F8721174F19303D78",
+      "paper": {
+        "AP": 54.0,
+        "AP50": 71.6,
+        "AP75": 58.4,
+        "APs": 36.5,
+        "APm": 58.0,
+        "APl": 71.9
+      },
+      "reproduced": "completed"
+    }
+  },
+  "environment": {
+    "python": "3.10.7",
+    "torch": "2.0.1+cpu",
+    "faster_coco_eval": "1.6.6",
+    "cpu": "Intel Core i7-12700H (14 physical / 20 logical cores)",
+    "ram_gb": 16.86,
+    "gpu": "None (CPU-only)",
+    "os": "Windows 10 (10.0.26200)"
+  }
+}

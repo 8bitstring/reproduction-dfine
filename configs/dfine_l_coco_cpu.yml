@@ -1,0 +1,20 @@
+__include__:
+  - '../D-FINE/configs/dfine/dfine_hgnetv2_l_coco.yml'
+
+output_dir: './runs/dfine_l_coco_val2017'
+
+HGNetv2:
+  pretrained: False
+
+train_dataloader:
+  num_workers: 0
+  dataset:
+    img_folder: '../paper_reproduction/datasets/coco/images/val2017'
+    ann_file: '../paper_reproduction/datasets/coco/annotations/instances_val2017.json'
+
+val_dataloader:
+  num_workers: 0
+  total_batch_size: 4
+  dataset:
+    img_folder: '../paper_reproduction/datasets/coco/images/val2017'
+    ann_file: '../paper_reproduction/datasets/coco/annotations/instances_val2017.json'

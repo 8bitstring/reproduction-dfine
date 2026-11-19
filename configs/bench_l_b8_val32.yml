@@ -1,0 +1,7 @@
+__include__:
+  - './dfine_l_coco_smoke32.yml'
+
+output_dir: './runs/bench_l_b8_val32'
+
+val_dataloader:
+  total_batch_size: 8

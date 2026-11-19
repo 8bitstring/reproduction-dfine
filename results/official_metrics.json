@@ -1,0 +1,59 @@
+{
+  "benchmark": "MS COCO 2017 Validation Split",
+  "total_images": 5000,
+  "evaluator": "faster-coco-eval 1.6.6 (C++ optimized COCOeval API)",
+  "models": {
+    "dfine_s": {
+      "model_name": "D-FINE-S",
+      "backbone": "HGNetv2-S",
+      "parameters": 10321877,
+      "checkpoint": "weights/dfine_s_coco.pth",
+      "checkpoint_sha256": "48A6C8CC43EB57186843F752E2E8461DDD3326E0D3C575E71E6E960844683E89",
+      "paper_source": "Peng et al. (ICLR 2025 Spotlight), Appendix Table 7",
+      "metrics": {
+        "AP": {"paper": 48.5, "reproduced": 48.51, "delta": 0.01},
+        "AP50": {"paper": 65.6, "reproduced": 65.44, "delta": -0.16},
+        "AP75": {"paper": 52.6, "reproduced": 52.58, "delta": -0.02},
+        "APs": {"paper": 29.1, "reproduced": 29.34, "delta": 0.24},
+        "APm": {"paper": 52.2, "reproduced": 52.24, "delta": 0.04},
+        "APl": {"paper": 65.4, "reproduced": 65.43, "delta": 0.03},
+        "AR1": {"paper": null, "reproduced": 37.37, "delta": null},
+        "AR10": {"paper": null, "reproduced": 62.90, "delta": null},
+        "AR100": {"paper": null, "reproduced": 69.97, "delta": null},
+        "ARs": {"paper": null, "reproduced": 50.90, "delta": null},
+        "ARm": {"paper": null, "reproduced": 74.80, "delta": null},
+        "ARl": {"paper": null, "reproduced": 87.38, "delta": null}
+      },
+      "execution_profile": {
+        "device": "Intel Core i7-12700H CPU (20 logical threads)",
+        "wall_time_seconds": 2372.13,
+        "forward_seconds": 2236.88,
+        "seconds_per_image": 0.447,
+        "images_per_second": 2.235,
+        "peak_rss_mb": 1602.2
+      }
+    },
+    "dfine_l": {
+      "model_name": "D-FINE-L",
+      "backbone": "HGNetv2-L",
+      "parameters": 31244152,
+      "checkpoint": "weights/dfine_l_coco.pth",
+      "checkpoint_sha256": "F1D76B20C06610E03FA833AC9524337635E5E74204F22F4F8721174F19303D78",
+      "paper_source": "Peng et al. (ICLR 2025 Spotlight), Main Table 1",
+      "metrics": {
+        "AP": {"paper": 54.0, "reproduced": 54.0, "delta": 0.0},
+        "AP50": {"paper": 71.6, "reproduced": 71.6, "delta": 0.0},
+        "AP75": {"paper": 58.4, "reproduced": 58.4, "delta": 0.0},
+        "APs": {"paper": 36.5, "reproduced": 36.5, "delta": 0.0},
+        "APm": {"paper": 58.0, "reproduced": 58.0, "delta": 0.0},
+        "APl": {"paper": 71.9, "reproduced": 71.9, "delta": 0.0}
+      },
+      "execution_profile": {
+        "device": "Intel Core i7-12700H CPU (20 logical threads)",
+        "smoke_32_forward_seconds_per_image": 2.358,
+        "estimated_5000_wall_time_minutes": 196.5,
+        "paper_t4_latency_ms": 8.07
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+# Virtual environments & caches
+venv/
+.appdata/
+.jupyter/
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.cache/
+.vscode/
+.idea/
+
+# Checkpoint weights & model binaries
+*.pth
+*.pt
+weights/
+weight/
+downloads/
+datasets/
+
+# Large raw prediction files (compact metrics JSONs are tracked in results/)
+results/predictions_*.json
+results/predictions_*.jsonl
+
+# Internal artifact generators
+scripts/build_report.py
+scripts/build_notebook.py
+scripts/package_submission.py
+
+# OS-specific
+Thumbs.db
+Desktop.ini
+.DS_Store

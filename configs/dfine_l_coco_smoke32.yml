@@ -1,0 +1,9 @@
+__include__:
+  - './dfine_l_coco_cpu.yml'
+
+output_dir: './runs/smoke_dfine_l_coco_val32'
+
+val_dataloader:
+  total_batch_size: 4
+  dataset:
+    ann_file: './data/instances_val32.json'
